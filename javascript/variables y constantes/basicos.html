@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Java Script</title>
+</head>
+<body>
+        <h1>Fundamentos Java Script</h1>
+
+        <ul>
+            <li>Primavera</li>
+            <li>Otoño</li>
+            <li>Verano</li>
+            <li>Invierno</li>
+        </ul>
+
+        <h2>Funciones</h2>
+        <script>
+            
+           /* var hola = "Hola mundo";
+            let hello= "hello world"
+            
+            console.log(hola);
+            console.log(hello);*/
+
+
+
+            //      ambito de bloque
+            
+         
+         
+            /*  var musica = "rock";
+            console.log("Variable musica antes del bloque", musica);
+            
+            {
+            var musica="pop";
+            console.log("Variable musica dentro del bloque", musica);
+            }
+
+            console.log("Variable musica fuera del bloque", musica);*/
+
+
+
+            //      ambito de bloque con let
+
+
+
+           /*  let musica2 = "rock";
+            console.log("Variable musica antes del bloque", musica2);
+            
+            {
+            let musica2="pop";
+            console.log("Variable musica dentro del bloque", musica2);
+            }
+
+            console.log("Variable musica fuera del bloque", musica2);*/
+
+
+
+            //Constante
+
+
+
+            let a;
+            const pi=3.1416;
+
+            console.log(pi);
+
+             a="kenai";
+            console.log(a);
+
+            let objeto={
+                nombre: "jon",
+                edad:35
+            }
+
+
+            let colores=["blanco","verde"];
+
+            console.log(objeto)
+            console.log(colores)
+
+
+
+            //cadena textos
+
+           
+           
+            // let nombre = "Josue";
+            // let apellido = "Dominguez";
+
+
+
+
+            //      declarando con constructor
+
+
+           /* let saludo = new String("Hola Mundo");
+            let lorem= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quod perferendis repellat repudiandae tempore. Aliquam et aut harum quidem sed. Cum vitae est aliquam voluptatem perferendis officiis accusantium tenetur adipisci?";
+
+            console.log(
+                nombre.length,
+                apellido.length,
+                saludo.length,
+                nombre.toUpperCase(),
+                apellido.toLowerCase(),
+                lorem.includes("amet"),
+                lorem.includes("jon"),
+                lorem.trim(),
+                lorem.split(" "),
+                lorem.split(" , ")
+                ); */
+
+                let nombre = "Josue";
+                let apellido = "Dominguez";
+                
+
+
+                //Concatenación
+                
+                
+                
+                let saludo = "Hola mi nombre es " + nombre + " " + apellido;
+
+               
+               
+               
+                //interpolacion de variables
+
+                //templates String
+
+                
+                
+                // let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
+
+                // console.log(saludo2);
+
+
+                // let ul ="<ul><li>Primavera</li><li>Otoño</li><li>Verano</li><li>Invierno</li></ul>";
+
+                // console.log(ul);
+
+                // let ul2=`   
+        // <ul>
+        //     <li>Primavera</li>
+        //     <li>Otoño</li>
+        //     <li>Verano</li>
+        //     <li>Invierno</li>
+        // </ul>.`
+
+        // console.log(ul2);
+
+
+
+        //      Undefined, null y NaN
+
+           // Undefined indica que nose ha inicializado una variable y que valor esta ausente
+
+            let indefinida;
+            console.log(indefinida);
+
+            // null es valor especial que indica la ausencia de un valor
+            
+            // let nulo = null;
+            // console.log(nulo)
+
+
+            //      NaN - Not a Number
+
+
+            // let noEsUnNumero = "hola" * 3.7;
+            // console.log(noEsUnNumero);
+
+
+
+            //      Funciones
+
+            // Funcion declarada
+
+
+            function estoEsUnafuncion(){
+                console.log("Uno");
+                console.log("Dos");
+                console.log("Tres");
+            }
+
+            estoEsUnafuncion();
+            
+
+            //Usando Return en JAVA SCRIPT
+
+            function devuelveValor(){
+
+                let numero= 1;
+                let numero2 = 1;
+                return numero+numero2;
+            }
+
+            let resultado = devuelveValor();
+
+            console.log(resultado);
+
+
+
+            // let Nombres = "Josue";
+            // let Apellidos = "Dominguez";
+
+            // Unir();
+
+            // function Unir(nombre, edad) {
+            //     console.log(`Hola mi nombre es ${Nombres} y mi apellido ${Apellidos}`);
+            // }
+
+            // Unir();
+
+
+            //Funcion Anonima
+
+
+            // const FuncionExpresada = function(){
+            //     console.log("Esto es UnaFuncion si lo im")
+            // }
+
+            // FuncionExpresada();
+
+
+
+
+            //      Areglos
+
+
+            const arreglo = [];
+            const arreglo2 = [1,true,"Hola",["A","B","C","D",[1,2,3]]]
+            console.log(arreglo);
+            console.log(arreglo2);
+            console.log(arreglo2.length);
+            console.log(arreglo2[2]);
+            console.log(arreglo2[0]);
+            console.log(arreglo2[3][0]);
+            console.log(arreglo2[3][4][2])
+            
+
+            const c = Array.of("X","Y","Z",9,8,7);
+            console.log(c);
+
+
+            const d = Array(100).fill(false);
+            console.log(d);
+
+
+
+            const colores3 = ["rojo", "verde","violeta"];
+            console.log(colores3);
+
+            colores3.push("Negro");
+            console.log(colores3);
+
+
+            colores3.pop();
+            console.log(colores3);
+                
+            //Forma antigua 
+
+            // const e = new Array();
+            // console.log(e);
+
+            // const f = new Array(1,2,3,true,false);
+            // console.log(f);
+
+                colores.forEach(function(el,index){
+                    console.log(`<li id = "${index}"> ${el}</li>"`)
+                });
+            
+
+            
+            //Objetos
+
+            let cadena = "Hola";
+            console.log(cadena);
+
+            const ba = {
+
+            }
+
+            console.log(ba);
+
+            const josue ={
+                Nombre: "Josue",
+                Apellido: "Dominguez",
+                Edad: 17,
+                PasaTiempos: ["Corre", "Programar", "Futbol"],
+                Soltero: true,
+                contacto:{
+                    Email:"josuedominguezh@upeu.edu.pe",
+                    Facebook: "Josue Dominguez",
+                    Movil: 908751231
+                },
+                saludar:function(){
+                    console.log(`Hola:)`);
+                },
+                decirMiNombre: function(){
+                    console.log(`Hola Me llamo ${this.Nombre} ${this.Apellido} tengo ${this.Edad} Años`);
+                }
+            }
+
+            console.log(josue);
+            console.log(josue.Apellido);
+            console.log(josue.PasaTiempos);
+            
+
+            josue.saludar();
+            josue.decirMiNombre();
+
+            console.log(Object.keys(josue));
+            console.log(Object.values(josue));
+
+            //Devueve true o false si ese campo existe en el objeto
+            console.log(josue.hasOwnProperty("Nombre"));
+            console.log(josue.hasOwnProperty("nacimineto"));
+
+
+
+            //Tipos De Operadores
+
+            //Atirmeticos +,-,*,/, %,()
+
+            let a1 =5+5;
+            let modulo = 5%2;
+
+            console.log(a1);
+            console.log(modulo);
+
+            /*Relacionales
+             >,<,==,===,!=,!== */
+
+             console.log(8>9);
+             console.log(9>8);
+             console.log(9>=8);
+
+             /* 
+             = 1 igual es asignacion
+             == 2 iguales es comparacion
+             === 3 comparacion de tipo de dato y de valor
+              */
+
+              console.log(7==7);
+              console.log("7"===7);
+              console.log(0===false);
+
+
+              /* Incremento Decremento*/
+
+              let i = 1;
+
+            //   i=i+2;
+
+                i+=3;
+
+              console.log(i);
+
+
+              /* Operador Unario*/
+
+              i++;
+              console.log(i);
+
+              i--;
+              console.log(i);
+
+            /* Primero en el pirmer console primero imprime el i =5 y luego le suma 1 en el siguiente console primero le suma 1 y le imprime que seria i=6*/
+              console.log(i++);
+              console.log(++i);
+
+
+
+
+              //Operadores Logicos
+
+              /* 
+              !  =not
+              ||   = or
+              &&    =and
+              */
+
+
+              console.log(!true);
+              console.log(!false);
+              console.log((9===9) && ("9" === 9));
+              console.log((9===9) || ("9" === 9));
+
+        </script>
+</body>
+</html>
