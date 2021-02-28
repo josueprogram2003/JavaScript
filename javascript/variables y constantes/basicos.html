@@ -787,7 +787,7 @@
 
                         // Herencia Prototipica
 
-                        function Animal(nombre, genero){
+                        /*function Animal(nombre, genero){
                          this.nombre = nombre;
                          this.genero = genero;
 
@@ -799,47 +799,325 @@
 
                         Animal.prototype.saludar = function () {
                         console.log(`Hola me llamo ${this.nombre}`);
-                        }
+                        }*/
 
                          // Herencia Prototipica
 
-                         function Perro(nombre,genero,tamanio){
+                         /*function Perro(nombre,genero,tamanio){
                              this.super=Animal;
                              this.super(nombre,genero);
                              this.tamanio=tamanio;
-                         }
+                         }*/
 
                          //Perro esta heredando de animal
 
-                         Perro.prototype = new Animal();
-                         Perro.prototype.constructor = Perro;
+                        //  Perro.prototype = new Animal();
+                        //  Perro.prototype.constructor = Perro;
 
                          // Sobreescritura de métodos del Prototipo padre en el hijo
 
-                         Perro.prototype.sonar = function(){
-                             console.log("Soy un perro y mi sonido es un ladrido");
-                         };
+                    //      Perro.prototype.sonar = function(){
+                    //          console.log("Soy un perro y mi sonido es un ladrido");
+                    //      };
 
-                         Perro.prototype.ladrar = function(){
-                             console.log("Guuaaaaa Guaaaa");
-                         }
+                    //      Perro.prototype.ladrar = function(){
+                    //          console.log("Guuaaaaa Guaaaa");
+                    //      }
 
 
-                        const snoopy = new Perro("Snoopy", "Macho","Mediano"),
-                        lola = new Animal("Lola Bunny","Hembra");
+                    //     const snoopy = new Perro("Snoopy", "Macho","Mediano"),
+                    //     lola = new Animal("Lola Bunny","Hembra");
                         
                         
-                     console.log(snoopy);
-                     console.log(lola);
+                    //  console.log(snoopy);
+                    //  console.log(lola);
 
-                     snoopy.sonar();
-                     lola.sonar();
+                    //  snoopy.sonar();
+                    //  lola.sonar();
 
-                     snoopy.saludar();
-                     lola.saludar();
+                    //  snoopy.saludar();
+                    //  lola.saludar();
 
-                     snoopy.ladrar();
+                    //  snoopy.ladrar();
+
+
+                    // 24. Clases y Herencia
+
+
+                // class Animal{
+                        
+                //     constructor(nombre,genero){
+                //          this.nombre = nombre;
+                //          this.genero = genero;
+
+                //     }
+                      
+                    //Métodos
+
+                //     sonar(){
+                //         console.log("Hago sonidos por estoy vivo");
+                //     }
+
+                //     saludar(){
+                //         console.log(`Hola me llamo ${this.nombre}`);
+                //     }                        
+                //     }
+                // class Perro extends Animal{
+                //     constructor(nombre,genero,tamanio){
+                        //El metodo super manda a llamar al constructor del padre
+                    //     super(nombre,genero);
+                    //     this.tamanio=tamanio;
+                    //     this.raza=null;
+                    // }
+
+                    // sonar(){
+                    //     console.log("Hago sonidos por estoy vivo");
+                    // }
+                    
+                    // ladrar(){
+                    //     console.log("Guuaaa GUAAAAA")
+                    // }
+                    //METODOS ESTATICOS GETTERS Y SETTERS
+
+                    //Un metodo estatico se pueden ejecutar sin necesidad de instanciar la clase
+
+                    // static queEres(){
+                    //     console.log("Los perros somos animales mamifereos que pertenecemos a la familia de los caninos");
+                    // }
+
+                    //Los setters y Getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+
+                //     get getRaza(){
+                //         return this.raza;
+                //     }
+
+                //     set setRaza(raza){
+                //         this.raza = raza;
+                //     }
+
+                    
+                // }
+
+                //     Perro.queEres();
+
+                //     const mimi = new Animal("Mimi", "Hembra"),scooby = new Perro("Scooby","Macho","Gigante");
+
+                //     console.log(mimi);
+                //     mimi.saludar();
+                //     console.log(scooby);
+                //     scooby.ladrar();
+                //     console.log(scooby.getRaza);
+                //     scooby.setRaza = "Gran Danes";
+                //     console.log(scooby.getRaza);
+
+
+
+
+
+
+                    //Objeto Console
+
+                //     console.log(console);
+                //     console.error("Esto es un error");
+                //     console.warn("Esto es un aviso");
+                //     console.info("Esto es un mensaje informativo");
+                //     console.log("Un registro de lo que ha sucedido en nuestra aplicacion");
+
+                //     let nombre = "Jon",
+                //     apellido = "Mircha",
+                //     edad = 35;
+
+                //     console.log(nombre);
+                //     console.log(apellido);
+                //     console.log(edad);
+                //     console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`);
+
+                //     console.log(`Hola mi nombre es %s %s y tengo %d años.`,nombre,apellido,edad);
+
+                   
+                //     console.clear();
+
+                //     console.log(window);
+                //     console.log(document);
+
+                //     console.dir(window);
+                //     console.dir(document);
+                    
+                //     console.clear();
+
+                //     console.group("Cursos de @jonmircha en YouTube");
+                //     console.log("Cude de JavaScrit");
+                //     console.log("Cude de Node.js");
+                //     console.log("Cude de PWAs");
+                //     console.log("Cude de Flexbox");
+                //     console.log("Cude de Diseño y Programacion Web");
+                //     console.groupEnd();
+
+                //     console.groupCollapsed("Cursos de @jonmircha en YouTube");
+                //     console.log("Cude de JavaScrit");
+                //     console.log("Cude de Node.js");
+                //     console.log("Cude de PWAs");
+                //     console.log("Cude de Flexbox");
+                //     console.log("Cude de Diseño y Programacion Web");
+                //     console.groupEnd();
+
+                //     console.clear();
+
+                //     console.log(console);
+
+                //     console.table(Object.entries(console).sort());
+
+
+                //     const numeros = [1,2,3,4,5], vocales=["a","e","i","o","u"];
+
+                //     console.table(numeros);
+                //     console.table(vocales)
+
+
+                //     const perro = {
+                //         nombre:"Boni",
+                //         raza: "Boxer",
+                //         color: "Cafe"
+                //     };
+
+                //     console.table(perro);
+
+                //     console.clear();
+
+
+                //     console.time("Cuanto tiempo tarda mi codigo");
+                //     const arreglo = Array(100000);
+
+                //     for (let i = 0; i < arreglo.length; i++) {          
+                //         arreglo[i]=i;
+                //   }
+
+                //     console.timeEnd("Cuanto tiempo tarda mi codigo");
+
+                //     console.clear();
+
+                //     for (let i = 0; i <= 100; i++) {      
+                //         console.count("codigo for")    
+                //         console.log(i);
+                //   }
+
+                //   console.clear();
+
+                //   let x=1,
+                //   y=2,
+                //   pruebaXY="Se espera que X siempre sea menor que Y";
+
+                //   console.assert(x<y,{x,y,pruebaXY});
+
+                  
+                  
+                  //   Objeto Date
+
+                //   console.log(Date());
+
+                //   let fecha = new Date();
+                //   console.log(fecha);
+
+                  //Dia del mes
+
+                //   console.log(fecha.getDate());
+
+                  //Día de la semana D L M M J V S -> 0 1 2 3 4 5 6
+
+                //   console.log(fecha.getDay());
+
+
+                  //Para poder obtener el mes del año
+
+                //   console.log(fecha.getMonth()+1);
+
+                  //Para poder obtener el año
+
+                //   console.log(fecha.getFullYear());
+
+                  //Para obtener horas - minutos - segundos
+
+
+                  //Horas
+                //   console.log(fecha.getHours());
+
+                  //Minutos
+                //   console.log("0"+fecha.getMinutes());
+                  
+                  //Segundos
+                //   console.log(fecha.getSeconds());
+                  
+                  //Milisegundos
+                //   console.log(fecha.getMilliseconds());
+
+                  //Aprendiendo a utilizar el to en date
+
+                //   console.log(fecha.toString());
+
+                //   console.log(fecha.toDateString());
+
+                //   console.log(fecha.toLocaleString());
+
+                //   console.log(fecha.toLocaleDateString());
+
+                //   console.log(fecha.toLocaleTimeString());
+
+                //   console.log(fecha.getTimezoneOffset());
+
+
+                //   console.log(fecha.getUTCDate());
+
+
+                //   console.log(fecha.getUTCHours());
+
+
+                //   console.log(Date.now());
+
+                //   let cumplejon= new Date(1984,5,23);
+                //   console.log(cumplejon);
+
+
+
+                //Objeto Math
+
+
+                console.log(Math);
+
+                console.log(Math.PI)
+
+                console.log(Math.abs(7.8));
+                console.log(Math.abs(-7.8));
+
+
+                // EL METODO CEIL PERMITE QUE TODO NUMERO DECIMAL SE REDONDEE AL NUMERO MAYOR
+                console.log(Math.ceil(7.8));
+                // EL METODO CEIL PERMITE QUE TODO NUMERO DECIMAL SE REDONDEE AL NUMERO MENOR
+                console.log(Math.floor(7.8));
+                // EL METODO CEIL PERMITE QUE TODO NUMERO DECIMAL SE REDONDEE AL NUMERO MAYOR O MENOR DEPENDIENDO DEL DECIMAL
+                 console.log(Math.round(7.2));
+                 console.log(Math.round(7.9));
+
+
+                //Raiz cuadra
+                 console.log(Math.sqrt(81));
+
+                 //Potencia
+
+                 console.log(Math.pow(2,5));
+
+
+                 console.log(Math.sign(-7.8)) // si es negativo = -1, si es 0 = 0, si es positivo = 1;
+
+                 console.log(Math.random()); // valor de 0 a 1
+
+                 console.log(Math.random()*100);
+
+                 console.log(Math.round(Math.random()*1000));
+
 
         </script>
 </body>
 </html>
+
+
+
