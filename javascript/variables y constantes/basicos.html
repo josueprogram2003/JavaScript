@@ -8,7 +8,7 @@
 </head>
 <body>
         <h1>Fundamentos Java Script</h1>
-
+  
         <ul>
             <li>Primavera</li>
             <li>Otoño</li>
@@ -332,6 +332,9 @@
             // console.log(a1);
             // console.log(modulo);
 
+            
+            
+            
             /*Relacionales
              >,<,==,===,!=,!== */
 
@@ -660,6 +663,9 @@
 
                     // saludar();
 
+
+
+                    
                     // Arrow function
 
                     /* Cuando tu arrow function tiene solo una linea de codigo se puede omitir las llaves y cuando le pase un parametro ya no es necesario poner los parentesis pero cuando no haya 1 parametro tengo que poner de manera forzada los parentesis*/
@@ -862,6 +868,8 @@
                 //         console.log(`Hola me llamo ${this.nombre}`);
                 //     }                        
                 //     }
+                
+                
                 // class Perro extends Animal{
                 //     constructor(nombre,genero,tamanio){
                         //El metodo super manda a llamar al constructor del padre
@@ -877,6 +885,17 @@
                     // ladrar(){
                     //     console.log("Guuaaa GUAAAAA")
                     // }
+                    
+                    
+                   
+                    
+
+
+
+
+
+
+
                     //METODOS ESTATICOS GETTERS Y SETTERS
 
                     //Un metodo estatico se pueden ejecutar sin necesidad de instanciar la clase
@@ -909,6 +928,8 @@
                 //     console.log(scooby.getRaza);
                 //     scooby.setRaza = "Gran Danes";
                 //     console.log(scooby.getRaza);
+
+
 
 
 
@@ -1010,6 +1031,11 @@
                 //   console.assert(x<y,{x,y,pruebaXY});
 
                   
+
+
+
+
+
                   
                   //   Objeto Date
 
@@ -1078,41 +1104,154 @@
 
 
 
+
+
+
+
+
                 //Objeto Math
 
 
-                console.log(Math);
+                // console.log(Math);
 
-                console.log(Math.PI)
+                // console.log(Math.PI)
 
-                console.log(Math.abs(7.8));
-                console.log(Math.abs(-7.8));
+                // console.log(Math.abs(7.8));
+                // console.log(Math.abs(-7.8));
 
 
                 // EL METODO CEIL PERMITE QUE TODO NUMERO DECIMAL SE REDONDEE AL NUMERO MAYOR
-                console.log(Math.ceil(7.8));
+                // console.log(Math.ceil(7.8));
                 // EL METODO CEIL PERMITE QUE TODO NUMERO DECIMAL SE REDONDEE AL NUMERO MENOR
-                console.log(Math.floor(7.8));
+                // console.log(Math.floor(7.8));
                 // EL METODO CEIL PERMITE QUE TODO NUMERO DECIMAL SE REDONDEE AL NUMERO MAYOR O MENOR DEPENDIENDO DEL DECIMAL
-                 console.log(Math.round(7.2));
-                 console.log(Math.round(7.9));
+                //  console.log(Math.round(7.2));
+                //  console.log(Math.round(7.9));
 
 
                 //Raiz cuadra
-                 console.log(Math.sqrt(81));
+                //  console.log(Math.sqrt(81));
 
                  //Potencia
 
-                 console.log(Math.pow(2,5));
+                //  console.log(Math.pow(2,5));
 
 
-                 console.log(Math.sign(-7.8)) // si es negativo = -1, si es 0 = 0, si es positivo = 1;
+                //  console.log(Math.sign(-7.8)) // si es negativo = -1, si es 0 = 0, si es positivo = 1;
 
-                 console.log(Math.random()); // valor de 0 a 1
+                //  console.log(Math.random()); // valor de 0 a 1
 
-                 console.log(Math.random()*100);
+                //  console.log(Math.random()*100);
 
-                 console.log(Math.round(Math.random()*1000));
+                //   console.log(Math.round(Math.random()*1000));
+
+
+
+
+
+
+
+                /* 
+                  Cortocircuito OR 
+                  Cortocircuito AND
+                */
+
+
+
+                // function saludar(nombre) {
+                //   nombre = nombre || "Desconocido"
+                //   console.log(`Hola ${nombre}`);
+                // }
+
+                // saludar("Josue");
+                // saludar();
+
+                // console.log("Cadena" || "Valor de la Derecha");
+                // console.log(19 || "Valor de la Derecha");
+                // console.log(true || "Valor de la Derecha");
+
+                // console.log("Cadena" && "Valor de la Derecha");
+                // console.log(19 && "Valor de la Derecha");
+                // console.log(true && "Valor de la Derecha");
+
+
+                /* Alert, confirm y prompt */
+
+                // console.log(window);
+                //window.alert("Hola esto es una alerta");
+                //window.confirm("Hola esto es una confirm");
+                //window.prompt("Hola esto es una prompt y le permite al usuario ingresar un valor");
+
+                // let alerta = alert("Hola esto es un alert"),
+                // confirmacion = confirm("Hola esto es una confirm"),
+                // aviso = prompt("Hola esto es una prompt y le permite al usuario ingresar un valor");
+
+                  // Solo es para mandar alerta
+                // console.log(alerta);
+
+                // te dara true si pones aceptar y false si pones cancelar
+                // console.log(confirmacion);
+
+                // te dara como resultado lo que escribes  , si no escribes nada te dara null
+                // console.log(aviso);
+
+
+
+
+                //---------------------------------------------
+
+
+
+
+                //Expresiones regulares 
+
+
+                 let cadena = "lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa deleniti deserunt expedita natus pariat,ur ducimus, dicta ad, illo ex nobis dignissimos dolorem praesentium fugiat. Rerum cupiditate id maxime et tempora 2918";
+                
+                //eN EL SEGUNDO PARAMETRO SE Pone g si quieres que encuentre esa palabra mas de una vez y si no pones nada ala primera que encuentra se detene, se pone i sino quiero que influya minusculas o mayusculas
+                let e = new RegExp("lorem","ig")
+                console.log(e.test(cadena));
+                console.log(e.exec(cadena));
+                // segunda manera de expresion regular
+
+                //Para buscar numeros 
+                 let ex = /\d/ig;
+
+                 console.log(ex.test(cadena));
+                 console.log(ex.exec(cadena));
+                  // Para ver cuanto se repite lo que repite va dentro las llaves la repeticion tiene que ser exacta cuando tiene coma quiere decir que se repita de 1 a 2 veces segun los numeros que pongas
+                 let exp = /lorem{1,2}/ig;
+
+                console.log(exp.test(cadena));
+                console.log(exp.exec(cadena));
+
+
+
+
+                //----------------------------------------------------------------------------------------------------------------
+                 
+                // Funciones Anonimas Autoejecutables
+                //Funcion clasica autoejecutables
+                  (function(){
+                    
+                    console.log("Mi primer IIFE");
+                  })();
+
+                  (function(d,w,c){
+                    
+                    console.log("Mi segunda IIFE");
+                    console.log(d);
+                    console.log(w);
+                    console.log(c);
+                    c.log("Este es un console.log")
+                  })(document,window,console);
+
+
+                  //Modulos export / import
+
+                  
+                  
+
 
 
         </script>
